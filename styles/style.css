@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('base.css');
 
-html{
+html {
     scroll-behavior: smooth;
 }
+
 :root {
     --base-black-clr: 15, 15, 15;
     --base-black-clr: 18, 18, 18;
@@ -43,14 +44,14 @@ h3 {
 h4 {
     font-size: 12px;
     font-weight: 400;
-    opacity: 50%;
+    opacity: 70%;
     margin-bottom: 4px;
 }
 
 p {
 
     font-weight: 300;
-    opacity: 60%;
+    opacity: 80%;
 }
 
 .container {
@@ -108,11 +109,13 @@ nav {
             color: rgb(var(--base-white-clr));
         }
     }
-    .navLinks{
+
+    .navLinks {
         transition: opacity 0.5s ease-in-out;
     }
 }
-.hidden-nav{
+
+.hidden-nav {
     opacity: 0;
     pointer-events: none;
 }
@@ -201,14 +204,14 @@ nav {
     & .container {
         /* padding-block: 100px; */
         height: 100vh;
-        
+
     }
 }
 
 .home-grid {
 
     grid-template-columns: repeat(4, 1fr);
-    
+
     width: 100%;
     gap: 16px;
 
@@ -357,10 +360,14 @@ nav {
 }
 
 
+.projects-print{
+    display: none;
+}
+
 
 /* Work Section */
 .work {
-    .project-small{
+    .project-small {
         display: none;
     }
 
@@ -422,7 +429,7 @@ nav {
         gap: 16px;
         padding-block: 100px;
 
-        .contact-icons {
+        & .contact-icons {
             background: var(--gradient-clr);
             padding: 20px;
             border-radius: 12px;
@@ -440,17 +447,17 @@ nav {
             justify-content: space-between;
             padding-top: 0;
             padding-bottom: 30px;
-    
+
             & img {
                 width: 70px;
                 margin-left: -10px;
             }
-    
+
             & h2 {
                 font-size: 40px;
                 font-weight: 400;
                 opacity: 100%;
-    
+
                 & inside {
                     color: rgba(var(--accent-clr), 1);
                 }
@@ -489,7 +496,6 @@ nav {
 
     & .contact-form {
         & h2 {
-
             & span {
                 color: rgb(var(--accent-clr));
             }
@@ -535,15 +541,18 @@ nav {
 
 }
 
-.dark-light-toggle{
+.dark-light-toggle {
     cursor: pointer;
     position: fixed;
     right: 40px;
     bottom: 40px;
-    & i{
+
+    & i {
         font-size: 20px;
         color: rgb(var(--base-white-clr));
     }
+
+    z-index: 98;
 }
 
 
@@ -551,109 +560,135 @@ nav {
 /* Media Queries */
 
 @media screen and (max-width: 940px) {
-    .navLinks{
+    .navLinks {
         display: none;
     }
-    .home{
-        & .container{
+
+    .home {
+        & .container {
             height: auto;
         }
     }
-    .home-grid{
-        grid-template-columns: 
-        repeat(auto-fit, minmax(300px, 1fr));
 
-        & .card-hire-me{
+    .home-grid {
+        grid-template-columns:
+            repeat(auto-fit, minmax(300px, 1fr));
+
+        & .card-hire-me {
             grid-column: span 1;
         }
-        & .card-3-division{
+
+        & .card-3-division {
             grid-column: span 1;
         }
     }
-    .about-grid{
-        grid-template-columns: 
-        repeat(auto-fit, minmax(300px, 1fr));
 
-        & .card-3-division{
-            grid-template-columns: 
+    .about-grid {
+        grid-template-columns:
+            repeat(auto-fit, minmax(300px, 1fr));
+
+        & .card-3-division {
+            grid-template-columns:
                 repeat(auto-fit, minmax(300px, 1fr));
         }
 
-        & .card-exp-outer{
+        & .card-exp-outer {
             grid-column: span 2;
         }
     }
 }
 
 
-@media screen and (max-width: 756px){
+@media screen and (max-width: 756px) {
 
-    section{
+    section {
 
-        & .container{
+        & .container {
             padding-block: 0 !important;
             padding-block-start: 100px !important;
         }
     }
 
-    & .card-3-division{
-        & div{
+    & .card-3-division {
+        & div {
             grid-column: span 2 !important;
         }
     }
 
 
-    .home-grid{
-        & .card-main{
+    .home-grid {
+        & .card-main {
             flex-direction: column;
             grid-column: span 1;
-        }        
+        }
 
-        & .projects-sub-card{
+        & .projects-sub-card {
             grid-column: span 2;
         }
     }
 
 
-    .about-grid{
-        .about-pic{
+    .about-grid {
+        .about-pic {
             display: none;
         }
 
 
-        & div{
+        & div {
             grid-column: span 2 !important;
         }
 
     }
 
-    .work-grid{
+    .work-grid {
 
         grid-template-columns: 1fr !important;
 
-        & div{
+        & div {
             grid-column: span 1 !important;
         }
-        & .marqee-sub-card{
+
+        & .marqee-sub-card {
             grid-column: span 2 !important;
         }
-        .project-wide{
+
+        .project-wide {
             display: none;
         }
-        .project-small{
+
+        .project-small {
             display: flex;
         }
     }
 
-    .contact-grid{
+    .contact-grid {
         text-align: center;
-        & div{
+
+        & div {
             grid-column: span 3 !important;
         }
+
         padding-block: 0 !important;
 
-        & .contact-form{
+        & .contact-form {
             gap: 40px;
         }
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    body {
+        --base-black-clr: 240, 240, 240;
+
+        --base-black-clr2: 210, 210, 210;
+        --base-white-clr: 31, 31, 31;
+        --theme-clr: 62, 237, 224;
+
+        --accent-clr: 232, 139, 0;
+
+        --gradient-clr: linear-gradient(90deg, rgba(84, 84, 84, 0.25), rgba(106, 106, 106, 0.1));
+        --gradient-clr-opposite: linear-gradient(-90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.243));
+        --gradient-clr-inner: linear-gradient(120deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.1));
     }
 }
