@@ -14,24 +14,25 @@
 
 <body>
 
-    <div class="dark-light-toggle">
+    <!-- <div class="dark-light-toggle">
         <i class="fa-solid fa-circle-half-stroke"></i>
-    </div>
+    </div> -->
 
     <header class="header d-flex block-center">
         <div class="container">
             <nav class="d-flex block-center inline-space-between">
-                <!-- <img src="assets/logo.png" alt="logo" class="brand-logo"> -->
-                <span style="font-size: 30px; font-family: monospace;">PD</span>
-                <ul class="navLinks d-flex gap20">
-                    <li><a href="#home" class="active">Home</a></li>
+                <a href="#home">
+                    <img src="assets/logo.png" alt="logo" class="brand-logo">
+                </a>
+                <!-- <ul class="navLinks d-flex gap20"> -->
+                    <!-- <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                </ul>
+                    <li><a href="#work">Work</a></li> -->
+                <!-- </ul> -->
 
-                <div class="nav-contact">
-                    <a href="#contact">Contact</a>
-                </div>
+                <a href="#contact" class="nav-contact">
+                    <p>Contact</p>
+                </a>
             </nav>
         </div>
     </header>
@@ -43,11 +44,11 @@
             <div class="home-grid d-grid">
 
                 <a href="#about" class="name-card card-main col-2 gap10 d-flex flex-row block-center">
-                    <img src="assets/home/proPicPortfolio.jpeg" alt="My Image">
+                    <img class="my-picture-img" src="assets/home/proPicInitial.jpg" alt="My Image">
 
                     <div class="outer d-flex inline-space-between">
                         <div class="card-content">
-                            <h2>Full Stack Developer</h2>
+                            <!-- <h2>Full Stack Developer</h2> -->
                             <h1>Priyanshu Dhall.</h1>
                             <p>Full-Stack Developer based in India.</p>
 
@@ -83,8 +84,8 @@
                         </div>
                     </a>
 
-                    <a href="https://drive.google.com/file/d/1SD9DGtnx-ZWRsbjkIhLXKvB4SukNpdF6/view" target="_blank"
-                        class="experience-sub-card card d-flex flex-column">
+                    <a href="https://drive.google.com/file/d/14lGP_XE-tMye6AVc_-6klNHQcLwP8GqF/view?usp=sharing" target="_blank"
+                        class="experience-sub-card card d-flex flex-column projects-sub-card">
                         <span class="icons-main material-symbols-outlined">
                             contact_page
                         </span>
@@ -135,11 +136,11 @@
 
                 <div class="card card-connect">
                     <div class="card-connect-inner d-flex block-center inline-space-evenly">
-                        <a href="https://github.com/anorangefalcon/" target="_blank">
+                        <a href="https://github.com/anorangefalcon" target="_blank">
                             <i class="fa-brands fa-github"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/priyanshu-dhall-b0b9341b7/" target="_blank">
+                        <a href="https://www.linkedin.com/in/priyanshu-dhall" target="_blank">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -165,7 +166,7 @@
             <div class="about-grid d-grid home-grid">
 
                 <div class="about-pic work-card d-flex card">
-                    <img src="assets/home/proPicPortfolio.jpeg" alt="My Image">
+                    <img src="assets/home/proPicPortfolio.jpg" alt="My Image">
                 </div>
 
 
@@ -200,31 +201,45 @@
                         <div class="card-content d-flex flex-column gap10">
                             <h3>Experience</h3>
 
-                            <h5>Venture Pact | Full Stack</h5>
-                            <h6>Joined July 2023</h6>
-                            <p>
-                                Currently working as Associate Software Developer.
-                            </p>
+                            <h5>VenturePact | Associate Software Developer</h5>
+                            <h6>July 2023 - Present | Jalandhar, India</h6>
+                                <ul class="circle-styled-list">
+                                    <li>
+                                        <p>
+                                            Optimized application performance by implementing caching using Tanstack React Query, resulting in a 40% increase in app speed and responsiveness.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Developed and enhanced features for the Omniengage CRM tool, enabling seamless workflow execution across multiple platforms including WhatsApp and Meta via chat interface
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Spearheaded the implementation of a live chat feature, facilitating real-time communication for enhanced user engagement and support.
+                                        </p>
+                                    </li>
+                                </ul>
 
-                            <h5>Society of Promotion of IT | Machine Learning | Python</h5>
-                            <h6>August 2022 - January 2022 | Chandigarh</h6>
-                            <p>
-                                During my time at SPIC CENTRE, I created projects related to Python and Machine
-                                Learning. It was an incredible learning experience.
-                            </p>
+                            <h5>Society of Promotion of IT | ML & Python Internship</h5>
+                            <h6>August 2022 - January 2022 | Chandigarh, India</h6>
+                            <ul class="circle-styled-list">
+                                <li>
+                                    <p>
+                                        Created IPL Nostradamus, a Machine Learning project aimed at predicting the winners of upcoming Indian Premier League matches.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Leveraged Python libraries such as Tkinter, Pandas, NumPy, and SkLearn to build an intuitive and accurate prediction model.
+                                    </p>
+                                </li>
+                            </ul>
 
-                            <h5>Ansh Infotech| Data Science </h5>
-                            <h6>July 2021 - August 2021 | Ludhiana, Punjab</h6>
+                            <h5>Spoken Tutorial IIT Bombay | C & C++ Certification</h5>
+                            <h6>February 2021 | Remote</h6>
                             <p>
-                                At ANSHINFOTECH, I had the opportunity to learn the basics of Data Science, broadening
-                                my
-                                knowledge in this field.
-                            </p>
-
-                            <h5>Spoken Tutorial Certification | C, C++</h5>
-                            <h6>February 2021 | Remote, IIT Bombay</h6>
-                            <p>
-                                I completed a certification program covering C and advanced C++ concepts, enhancing my
+                                Certification program covering C and advanced C++ concepts, enhancing my
                                 programming skills.
                             </p>
                         </div>
@@ -235,21 +250,46 @@
                             <h3>Education</h3>
                             <h5>B.Tech. Computer Science and Engineering</h5>
                             <h6>Guru Nanak Dev Engineering College, Ludhiana, Punjab</h6>
-                            <p>2019-2023 CGPA: 8.3/10</p>
+                            <p>2019-2023 | CGPA: 8.43/10</p>
 
                             <h5>12th Grade</h5>
                             <h6>DAV Public School, Ludhiana, Punjab</h6>
-                            <p>2019 78.6% CBSE Board</p>
+                            <p>2019 | 78.6% CBSE Board</p>
 
                             <h3>Skills</h3>
-                            <ul style="list-style: circle; margin-left: 14px;">
+                            <h5>Programming:</h5>
+                            <ul class="skills circle-styled-list">
                                 <li>C++</li>
-                                <li>Java</li>
-                                <li>SQL</li>
+                                <li>Javascript</li>
                                 <li>Python</li>
-                                <li>HTML-CSS</li>
-                                <li>JavaScript</li>
+                                <li>NoSQL</li>
+                                <li>SQL</li>
                             </ul>
+
+                            <h5>Libraries & Frameworks:</h5>
+                            <ul class="skills circle-styled-list">
+                                <li>React</li>
+                                <li>Angular</li>
+                                <li>Redux</li>
+                                <li>Node</li>
+                                <li>Express</li>
+                                <li>Redis</li>
+                                <li>React-Query</li>
+                                <li>Pandas</li>
+                                <li>Numpy</li>
+                                <li>Tkinter</li>
+                            </ul>
+
+                            <h3>Course Work</h3>
+                            <ul class="skills circle-styled-list">
+                                <li>Object Oriented Programming</li>
+                                <li>JAVA Programming</li>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Software Engineering</li>
+                                <li>Operating Systems</li>
+                                <li>DBMS</li>
+                            </ul>
+
                             <h3 class="projects-print">Projects</h3>
                             <ul class="projects-print">
                                 <li>Online Judge - Full Stack</li>
@@ -277,7 +317,7 @@
                     class="project-wide project-pic work-card d-flex card col-2">
                     <!-- <div class="project-pic work-card d-flex card col-2"> -->
                     <img src="assets/OnlineJudge-logo.png" alt="Online Judge">
-                    <h6>Full Stack</h6>
+                    <h6>Javascript, NodeJS, MySQL</h6>
                     <h3>Online Judge</h3>
                     <!-- </div> -->
                 </a>
@@ -294,13 +334,13 @@
                     <a href="https://github.com/anorangefalcon/OnlineJudge_GNDEC" target="_blank"
                         class="project-small project-pic work-card d-flex card col-2">
                         <img src="assets/OnlineJudge-logo.png" alt="Online Judge">
-                        <h6>Full Stack</h6>
+                        <h6>Javascript, NodeJS, MySQL, HTML-CSS</h6>
                         <h3>Online Judge</h3>
                     </a>
                     <a href="https://github.com/anorangefalcon/Commen-Sense-Comment-Sentiment-Analyser" target="_blank"
                         class="project-small project-pic col-2 work-card d-flex card">
                         <img src="assets/commenSense.png" alt="My Image">
-                        <h6>ML - Python</h6>
+                        <h6>ML - Python, Tkinter, Sklearn, Pandas, Numpy</h6>
                         <h3>Commen' Sense</h3>
                     </a>
 
@@ -309,7 +349,7 @@
                     <a href="https://github.com/anorangefalcon/IPL-Nostradamus" target="_blank"
                         class="project project-pic col-2 work-card d-flex card">
                         <img src="assets/IPL-Nos.png" alt="My Image">
-                        <h6>ML - Python</h6>
+                        <h6>ML - Python, Tkinter, Sklearn, Pandas, Numpy</h6>
                         <h3>IPL Nostradamus</h3>
                     </a>
 
@@ -320,14 +360,21 @@
                 <a href="https://github.com/anorangefalcon/Commen-Sense-Comment-Sentiment-Analyser" target="_blank"
                     class="project-wide project-pic col-1 work-card d-flex card">
                     <img src="assets/commenSense.png" alt="My Image">
-                    <h6>ML - Python</h6>
+                    <h6>ML - Python, Tkinter, Sklearn, Pandas, Numpy</h6>
                     <h3>Commen' Sense</h3>
+                </a>
+
+                <a href="https://tradevogue.web.app" target="_blank"
+                    class="project-pic col-2 work-card d-flex card">
+                    <img src="assets/tradeVogue.png" alt="My Image">
+                    <h6>Angular, NodeJS, MongoDB, Redis</h6>
+                    <h3>Trade Vogue</h3>
                 </a>
 
                 <a href="https://anorangefalcon.github.io/Template-Ferrari-Frontend/" target="_blank"
                     class="project-pic col-2 work-card d-flex card">
                     <img src="assets/Ferrari-frontend.png" alt="My Image">
-                    <h6>Front-End</h6>
+                    <h6>HTML, CSS, Javascript</h6>
                     <h3>Ferrari Homepage</h3>
                 </a>
 
@@ -387,13 +434,13 @@
                     <h3 class="socials-head">Socials</h3>
                     <div class="d-flex gap40">
                         <div class="social contact-icons d-flex inline-center block-center">
-                            <a href="https://github.com/anorangefalcon/" target="_blank">
+                            <a href="https://github.com/anorangefalcon" target="_blank">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
 
                         <div class="social contact-icons d-flex inline-center block-center">
-                            <a href="https://www.linkedin.com/in/priyanshu-dhall-b0b9341b7/" target="_blank">
+                            <a href="https://www.linkedin.com/in/priyanshu-dhall" target="_blank">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
                         </div>
@@ -405,11 +452,12 @@
                     <img src="assets/home/bulb-logo.png" alt="">
 
                     <h2>Let's Work <span>Together.</span></h2>
-                    <form action="" class="d-flex flex-column gap20">
+                    <form action="https://formspree.io/f/moqgnekl" 
+                    method="POST"
+                    class="d-flex flex-column gap20">
 
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="E-Mail">
-                        <input type="text" placeholder="Subject">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="E-Mail">
                         <textarea name="message" placeholder="Leave a message." rows="3"
                             style="resize: none;"></textarea>
                         <button>Submit</button>
