@@ -611,10 +611,6 @@ nav {
       flex-direction: column;
       grid-column: span 1;
     }
-
-    /* & .projects-sub-card {
-      grid-column: span 2;
-    } */
   }
 
   .about-grid {
@@ -655,7 +651,6 @@ nav {
     }
 
     padding-block: 0 !important;
-
     & .contact-form {
       gap: 40px;
     }
@@ -672,6 +667,19 @@ nav {
         margin-block-end: 17px;
       }
     }
+  }
+
+  .contact {
+    padding-block-end: 60px;
+    .contact-grid {
+      .contact-details {
+        text-align: left;
+      }
+    }
+  }
+
+  .socials-body {
+    justify-content: center;
   }
 }
 
