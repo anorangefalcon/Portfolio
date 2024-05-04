@@ -139,11 +139,11 @@ nav {
   justify-content: space-between;
   /* border: solid 1px rgba(var(--base-white-clr), 0.08); */
   border-left: solid 1px rgba(var(--base-white-clr), 0.2);
-  transition: 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   & img {
-    filter: grayscale(30%);
-    transition: all 1s ease-in-out;
+    filter: grayscale(10%);
+    transition: all 0.3s ease-in-out;
   }
 
   & h1 {
@@ -156,8 +156,9 @@ nav {
   }
 
   &:is(:hover, :focus, .active) {
-    /* border: solid 1px rgba(var(--base-white-clr), 0.3); */
-
+    /* border: solid 1px rgba(var(--base-white-clr), 0.24); */
+    /* transform: scale(1.01);
+    border-radius: 20px; */
     & img {
       filter: grayscale(0%);
     }
@@ -235,7 +236,7 @@ nav {
 
   .name-card {
     & img {
-      width: 50%;
+      /* width: 50%; */
       padding: 12px;
       border-top-left-radius: 50px;
       border-bottom-right-radius: 50px;
@@ -657,6 +658,19 @@ nav {
 
     & .contact-form {
       gap: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card-hire-me {
+    display: none;
+  }
+  .home-grid {
+    & .card-connect {
+      .card-connect-inner {
+        margin-block-end: 17px;
+      }
     }
   }
 }
