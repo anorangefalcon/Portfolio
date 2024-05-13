@@ -416,7 +416,7 @@ nav {
 
   & img {
     border-radius: 12px;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
   }
 }
@@ -640,6 +640,9 @@ nav {
 
     .project-small {
       display: flex;
+      & img {
+        height: unset;
+      }
     }
   }
 
