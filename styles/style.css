@@ -686,7 +686,7 @@ nav {
   }
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   body {
     --base-black-clr: 240, 240, 240;
 
@@ -712,4 +712,4 @@ nav {
       rgba(255, 255, 255, 0.1)
     );
   }
-}
+} */
