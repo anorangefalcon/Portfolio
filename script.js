@@ -1,3 +1,40 @@
+const links = document.querySelectorAll(".navLinks a");
+
+async function postToNotion(data) {
+  const url = "https://rayiot-backend.vercel.app/weather/postToNotion";
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  return res;
+}
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
+
+    if (!name) {
+      return;
+    }
+    if (!email) {
+      return;
+    }
+
+    const response = await postToNotion({ name, email, message });
+    console.log(response);
+
+    return false;
+  });
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const navigation = document.querySelector(".navLinks");
 //   const sectionToTrigger = document.querySelector("section:nth-child(3)");
@@ -30,8 +67,6 @@
 //   bodyElement.classList.toggle('light-theme');
 
 // });
-
-const links = document.querySelectorAll(".navLinks a");
 
 // function checkActiveSection() {
 //   document.querySelectorAll("section").forEach((section) => {
