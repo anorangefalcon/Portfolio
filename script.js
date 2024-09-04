@@ -13,27 +13,82 @@ async function postToNotion(data) {
   return res;
 }
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", async function (event) {
-    event.preventDefault();
+const contactForm = document.getElementById("contactForm");
+const submitButton = document.getElementById("submitContactFormBtn");
+const nameField = document.getElementById("nameField");
+const emailField = document.getElementById("emailField");
+const nameFieldError = document.getElementById("nameFieldError");
+const emailFieldError = document.getElementById("emailFieldError");
 
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const message = event.target.message.value;
+contactForm.addEventListener("submit", handleSubmit);
+nameField.addEventListener("input", () => hideError(nameFieldError));
+emailField.addEventListener("input", () => hideError(emailFieldError));
 
-    if (!name) {
-      return;
-    }
-    if (!email) {
-      return;
-    }
+async function handleSubmit(event) {
+  event.preventDefault();
 
-    const response = await postToNotion({ name, email, message });
-    console.log(response);
+  const { name, email, message } = event.target.elements;
 
-    return false;
-  });
+  if (!validateForm(name.value, email.value)) return;
+
+  setSubmitButtonState(true, "Submitting...");
+
+  try {
+    await postToNotion({
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    });
+
+    setSubmitButtonState(true, "Success!");
+    submitButton.classList.add("success-background");
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    submitButton.classList.remove("success-background");
+
+    resetForm(event.target);
+  } catch (error) {
+    setSubmitButtonState(true, "Failed");
+    submitButton.classList.add("failed-background");
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    submitButton.classList.remove("failed-background");
+
+    console.error("Error submitting form:", error);
+  } finally {
+    setSubmitButtonState(false, "Submit");
+  }
+}
+
+function validateForm(name, email) {
+  let isValid = true;
+
+  if (!name) {
+    showError(nameFieldError);
+    isValid = false;
+  }
+  if (!email) {
+    showError(emailFieldError);
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+function showError(element) {
+  element.style.opacity = 1;
+}
+
+function hideError(element) {
+  element.style.opacity = 0;
+}
+
+function setSubmitButtonState(isDisabled, text) {
+  submitButton.disabled = isDisabled;
+  submitButton.textContent = text;
+}
+
+function resetForm(form) {
+  form.reset();
+}
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   const navigation = document.querySelector(".navLinks");

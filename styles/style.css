@@ -540,6 +540,36 @@ nav {
   }
 }
 
+.form-grp {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.req-field {
+  opacity: 0;
+  position: absolute;
+  right: 12px;
+  font-size: 12px;
+  color: rgb(254 56 29 / 84%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.success-background {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 255, 0, 0.1)
+  );
+}
+
+.failed-background {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 0, 0, 0.1)
+  );
+}
+
 .dark-light-toggle {
   cursor: pointer;
   position: fixed;
