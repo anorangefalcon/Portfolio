@@ -1,7 +1,7 @@
 const links = document.querySelectorAll(".navLinks a");
 
 async function postToNotion(data) {
-  const url = "https://rayiot-backend.vercel.app/weather/postToNotion";
+  const url = "https://api.priyanshudhall.tech/portfolio/saveContactForm";
   const res = await fetch(url, {
     method: "POST",
     headers: {
@@ -42,10 +42,9 @@ async function handleSubmit(event) {
 
     setSubmitButtonState(true, "Success!");
     submitButton.classList.add("success-background");
+    resetForm(event.target);
     await new Promise((resolve) => setTimeout(resolve, 2000));
     submitButton.classList.remove("success-background");
-
-    resetForm(event.target);
   } catch (error) {
     setSubmitButtonState(true, "Failed");
     submitButton.classList.add("failed-background");
