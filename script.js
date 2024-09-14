@@ -28,7 +28,6 @@ async function handleSubmit(event) {
   event.preventDefault();
 
   const { name, email, message } = event.target.elements;
-
   if (!validateForm(name.value, email.value)) return;
 
   setSubmitButtonState(true, "Submitting...");
@@ -40,6 +39,7 @@ async function handleSubmit(event) {
       message: message.value,
     });
 
+    updateContactFormCosmetics();
     setSubmitButtonState(true, "Success!");
     submitButton.classList.add("success-background");
     resetForm(event.target);
@@ -89,93 +89,17 @@ function resetForm(form) {
   form.reset();
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navigation = document.querySelector(".navLinks");
-//   const sectionToTrigger = document.querySelector("section:nth-child(3)");
+function updateContactFormCosmetics() {
+  const contactFormTest = document.getElementById("contactForm");
+  contactFormTest.classList.add("hide-contact-form");
 
-//   const options = {
-//     root: null,
-//     rootMargin: "0px",
-//     threshold: 0.5,
-//   };
+  const formHeading = document.getElementById("contactFormHeading");
 
-//   const callback = (entries, observer) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         navigation.classList.add("hidden-nav");
-//       } else {
-//         navigation.classList.remove("hidden-nav");
-//       }
-//     });
-//   };
+  formHeading.classList.add("hidden-opacity");
+  setTimeout(() => {
+    formHeading.innerHTML =
+      "Thank <span>you!</span><div>I will get back to you soon.</div>";
 
-//   const observer = new IntersectionObserver(callback, options);
-//   observer.observe(sectionToTrigger);
-// });
-
-// const darkLightToggle = document.querySelector(".dark-light-toggle");
-
-// darkLightToggle.addEventListener("click", function () {
-
-//   const bodyElement = document.body;
-//   bodyElement.classList.toggle('light-theme');
-
-// });
-
-// function checkActiveSection() {
-//   document.querySelectorAll("section").forEach((section) => {
-//     const rect = section.getBoundingClientRect();
-
-//     console.log();
-//     if (rect.top >= 0 && rect.bottom >= window.innerHeight) {
-//       const id = section.getAttribute("id");
-//       console.log(id, "thiss");
-//       // links.forEach((link) => link.classList.remove("active"));
-
-//       // document
-//       //   .querySelector(`.navLinks a[href="#${id}"]`)
-//       //   .classList.add("active");
-//     }
-//   });
-// }
-
-// window.addEventListener("scroll", function () {
-//   const sections = document.querySelectorAll("section");
-
-//   sections.forEach((section) => {
-//     const rect = section.getBoundingClientRect();
-//     const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-//     if (isVisible) {
-//       console.log("Section " + section.id + " is on the screen");
-//     }
-//   });
-// });
-
-// const options = {
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0,
-// };
-
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       console.log("Section " + entry.target.id + " is on the screen");
-
-//       links.forEach((link) => link.classList.remove("active"));
-
-//       document
-//         .querySelector(`.navLinks a[href="#${id}"]`)
-//         .classList.add("active");
-//     }
-//   });
-// }, options);
-
-// const sections = document.querySelectorAll("section");
-// sections.forEach((section) => {
-//   observer.observe(section);
-// });
-
-// window.addEventListener("scroll", checkActiveSection);
-// window.addEventListener("load", checkActiveSection);
+    formHeading.classList.remove("hidden-opacity");
+  }, 500);
+}

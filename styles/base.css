@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -16,37 +16,37 @@ figure,
 blockquote,
 dl,
 dd {
-    margin: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -54,82 +54,76 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-:root {
-    --base-black-clr: 15, 15, 15;
-    --base-black-clr: 18, 18, 18;
-    --base-black-clr2: 50, 50, 50;
-    --base-white-clr: 255, 255, 255;
-    --theme-clr: 193, 18, 31;
-
-    --accent-clr: 255, 164, 28;
-
-    /* --gradient-clr: linear-gradient(90deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.02)); */
-    /* --gradient-clr: linear-gradient(120deg, rgba(129, 128, 128, 0.15), rgba(67, 67, 67, 0.05)); */
-    --gradient-clr: linear-gradient(90deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03));
-    --gradient-clr-opposite: linear-gradient(-90deg, rgba(0, 0, 0, 0.243), rgba(0, 0, 0, 0.03));
-    /* --gradient-clr: linear-gradient(90deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.02)), url(../assets/idk.png); */
-
-    --gradient-clr-inner: linear-gradient(120deg, rgb(255 255 255 / 0.1), rgba(0, 0, 0, 0.3));
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
 }
 
 .light-theme {
-    /* Light theme colors */
-    --base-black-clr: 240, 240, 240;
-    /* Light gray */
+  /* Light theme colors */
+  --base-black-clr: 240, 240, 240;
+  /* Light gray */
 
-    --base-black-clr2: 210, 210, 210;
-    /* Gray */
-    --base-white-clr: 31, 31, 31;
-    /* Dark gray */
-    --theme-clr: 62, 237, 224;
-    /* Turquoise (adjusted for light theme) */
+  --base-black-clr2: 210, 210, 210;
+  /* Gray */
+  --base-white-clr: 31, 31, 31;
+  /* Dark gray */
+  --theme-clr: 62, 237, 224;
+  /* Turquoise (adjusted for light theme) */
 
-    --accent-clr: 232, 139, 0;
-    /* Use the same accent color */
+  --accent-clr: 232, 139, 0;
+  /* Use the same accent color */
 
-    /* Adjusted gradient colors for light theme */
-    --gradient-clr: linear-gradient(90deg, rgba(84, 84, 84, 0.25), rgba(106, 106, 106, 0.1));
-    --gradient-clr-opposite: linear-gradient(-90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.243));
-    --gradient-clr-inner: linear-gradient(120deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.1));
+  /* Adjusted gradient colors for light theme */
+  --gradient-clr: linear-gradient(
+    90deg,
+    rgba(84, 84, 84, 0.25),
+    rgba(106, 106, 106, 0.1)
+  );
+  --gradient-clr-opposite: linear-gradient(
+    -90deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.243)
+  );
+  --gradient-clr-inner: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1,
@@ -138,174 +132,177 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 /****Typography ***/
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .inline-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .inline-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .inline-space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .inline-space-evenly {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .block-center {
-    align-items: center;
+  align-items: center;
 }
 
 .block-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .d-grid {
-    display: grid;
+  display: grid;
 }
 
 .col-2 {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .col-3 {
-    grid-column: span 3;
+  grid-column: span 3;
 }
 
 .col-4 {
-    grid-column: span 4;
+  grid-column: span 4;
 }
 
 .col-5 {
-    grid-column: span 5;
+  grid-column: span 5;
 }
 
 .row-2 {
-    grid-row: span 2;
+  grid-row: span 2;
 }
 
 .row-3 {
-    grid-row: span 3;
+  grid-row: span 3;
 }
 
 .row-4 {
-    grid-row: span 4;
+  grid-row: span 4;
 }
 
-
 .gap10 {
-    gap: 10px;
+  gap: 10px;
 }
 
 .gap20 {
-    gap: 20px;
+  gap: 20px;
 }
 
 .gap30 {
-    gap: 30px;
+  gap: 30px;
 }
 
 .gap40 {
-    gap: 40px;
+  gap: 40px;
 }
 
 .mx-auto {
-    margin-inline: auto;
+  margin-inline: auto;
 }
 
 .mxs-auto {
-    margin-inline-start: auto;
+  margin-inline-start: auto;
 }
 
 .mxe-auto {
-    margin-inline-end: auto;
+  margin-inline-end: auto;
 }
 
 .width50 {
-    width: 50%;
+  width: 50%;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .fixed {
-    position: fixed;
+  position: fixed;
 }
 
 .fw-100 {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 .fw-200 {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .fw-300 {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .fw-400 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .fw-500 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .fw-600 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .fw-700 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .fw-800 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .fw-900 {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 :root {
-    --base-black-clr: 15, 15, 15;
-    --base-black-clr2: 50, 50, 50;
-    --base-white-clr: 255, 255, 255;
-    --theme-clr: 193, 18, 31;
-    --gradient-clr: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --base-black-clr: 15, 15, 15;
+  --base-black-clr2: 50, 50, 50;
+  --base-white-clr: 255, 255, 255;
+  --theme-clr: 193, 18, 31;
+  --gradient-clr: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 a {
-    color: rgb(var(--base-white-clr));
-    text-decoration: none;
-    cursor: pointer;
+  color: rgb(var(--base-white-clr));
+  text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }

@@ -269,8 +269,9 @@
                             <h3>Skills</h3>
                             <h5>Programming:</h5>
                             <ul class="skills circle-styled-list">
-                                <li>C++</li>
+                                <li>TypeScript</li>
                                 <li>Javascript</li>
+                                <li>C++</li>
                                 <li>Python</li>
                                 <li>NoSQL</li>
                                 <li>SQL</li>
@@ -460,17 +461,17 @@
                 <div class="contact-form card-hire-me col-2 card d-flex flex-column">
                     <img src="assets/home/bulb-logo.png" alt="">
 
-                    <h2>Let's Work <span>Together.</span></h2>
+                    <h2 id="contactFormHeading" class="contact-form-heading">Let's Work <span>Together.</span></h2>
                     <form id="contactForm" class="d-flex flex-column gap20">
 
-                        <div class="form-grp">
-                            <input class="name-field" id="nameField" type="text" name="name" placeholder="Name*">
-                            <span class="req-field" id="nameFieldError">field required!</span>
+                        <div class="error-grp">
+                            <input id="nameField" type="text" name="name" placeholder="Name*">
+                            <span id="nameFieldError">name is required</span>
                         </div>
 
-                        <div class="form-grp">
+                        <div class="error-grp">
                             <input type="email" id="emailField" name="email" placeholder="E-Mail*">
-                            <span class="req-field" id="emailFieldError">field required!</span>
+                            <span id="emailFieldError">e-mail is required</span>
                         </div>
 
                         <textarea name="message" placeholder="Leave a message..." rows="3"
