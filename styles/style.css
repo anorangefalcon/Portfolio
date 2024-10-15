@@ -711,9 +711,9 @@ nav {
 }
 
 @media screen and (max-width: 450px) {
-  .card-hire-me {
+  /* .card-hire-me {
     display: none;
-  }
+  } */
   .home-grid {
     & .card-connect {
       .card-connect-inner {
